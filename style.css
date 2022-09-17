@@ -4,8 +4,7 @@
 }
 
 body {
-    background-color: rgba(90, 84, 84, 0.801);
-    background-repeat: no-repeat;
+    background-color: rgba(128, 126, 126, 0.801);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -14,7 +13,7 @@ body {
 .container {
     width: 50%;
     height: auto;
-    background-color: rgba(216, 211, 211);
+    background-color: rgb(231, 231, 231);
     margin: auto;
     border: 0.5rem solid rgb(54, 54, 54);
     border-radius: 1rem;
