@@ -1,0 +1,93 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(90, 84, 84, 0.801);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* box and content */
+.container {
+    width: 50%;
+    height: auto;
+    background-color: rgba(216, 211, 211);
+    margin: auto;
+    border: 0.5rem solid rgb(54, 54, 54);
+    border-radius: 1rem;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+#title {
+    margin-bottom: 2rem;
+}
+
+#title h3 {
+    font-size: 1.5rem;
+}
+
+#title p {
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+
+/* section values */
+
+.content input {
+    width: 50%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+
+    border: 0.2rem solid gray;
+    border-radius: 0.6rem;
+}
+
+#results {
+    padding: 0.8rem;
+    width: 40%;
+    color: white;
+    font-size: 1.1rem;
+
+    background-color: rgb(54, 54, 54);
+    border: 0.2rem solid gray;
+    border-radius: 1rem;
+
+}
+
+#final-calc {
+    font-size: 1.2em;
+    margin-top: 0.5rem;
+    margin-right: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+    #title h3 {
+        font-size: 1rem;
+    }
+
+    #results {
+        padding: 0.5rem;
+        width: 50%;
+        height: 100px;
+        color: white;
+        font-size: 1rem;
+    
+        background-color: rgb(54, 54, 54);
+        border: 0.2rem solid gray;
+        border-radius: 1rem;
+    
+    }
+} 
