@@ -8,9 +8,21 @@
 
     <!--adicionando CSS-->
     <link rel="stylesheet" href="style.css">
+
+    <!--adicionando mobile icon menu-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section class="container">
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#contact">Contato</a>
+        <a href="#about">Sobre</a>
+        <a href="javascipt:void(0)" class="icon" onclick="responsiveMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <section class="container" id="home">
         <div class="box">
             <div id="title">
                 <h3>CHURRASCÔMETRO</h3>
@@ -33,6 +45,10 @@
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <p>Develop by <a href="https://github.com/guilhermepereira25">Guilherme Pereira</a></p>
+    </footer>
 
     <!--adicionando javascript-->
     <script src="main.js"></script>
