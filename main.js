@@ -8,20 +8,38 @@ let hours = document.getElementById("time");
 let adult = document.getElementById("adultos");
 let child = document.getElementById("kids");
 
+let home = document.getElementById("home");
+let contact = document.getElementById("contact");
+
 let resultado = document.getElementById("final-calc");
 
 function showResult() {
-    let valueAdults = adult.value;
-    let valueChild = child.value;
-    let valueHours = hours.value;
+    var valueAdults = adult.value;
+    var valueChild = child.value;
+    var valueHours = hours.value;
 
-    let totalCarne = calcCarne(valueHours) * valueAdults + ((calcCarne(valueHours)/2) * valueChild);
-    let totalCerveja = calcCerveja(valueHours) * valueAdults;
-    let totalBebida = calcBebidas(valueHours) * valueAdults + ((calcBebidas(valueHours)/2) * valueChild);
+    if (valueAdults > 0 && valueChild > 0 && valueHours > 0) {
+        totalCerveja = calcCerveja(valueHours) * valueAdults;
 
-    resultado.innerHTML = `<p>${totalCarne/1000}kg de Carne</p>`
-    resultado.innerHTML += `<p>${Math.ceil(totalCerveja/355)} Latas de Cerveja / ${Math.ceil((totalCerveja/355)/valueAdults)} por pessoa</p>`
-    resultado.innerHTML += `<p>${Math.ceil(totalBebida)}L de Refrigerante e Água</p>`
+        totalCarne = calcCarne(valueHours) * valueAdults + ((calcCarne(valueHours)/2) * valueChild);
+
+        totalBebida = calcBebidas(valueHours) * valueAdults + ((calcBebidas(valueHours)/2) * valueChild);
+    } else {
+        alert("Opções não podem ser 0");
+    }
+
+    if (resultado.style.display === 'none' || resultado.style.display === '') {
+        resultado.style.display = 'block';
+      
+        resultado.innerHTML = `<p>${totalCarne/1000}kg de Carne</p>`;
+
+        resultado.innerHTML += `<p>${Math.ceil(totalCerveja/355)} Latas de Cerveja / ${Math.ceil((totalCerveja/355)/valueAdults)} por pessoa</p>`;
+
+        resultado.innerHTML += `<p>${Math.ceil(totalBebida)}L de Refrigerante e Água</p>`;
+    } else {
+        resultado.style.display = 'none';
+        
+    }
 }
 
 
@@ -63,4 +81,20 @@ function responsiveMenu() {
     } else {
       x.className = "topnav";
     }
-} 
+}
+
+function getContact() {
+    if (contact.style.display == 'none') {
+        contact.style.display = 'block';
+        home.style.display = 'none';
+    } else if (contact.style.display == 'block') {
+        home.style.display = 'none';
+    } else {
+        getHome();
+    }
+}
+
+function getHome() {
+    contact.style.display = 'none';
+    home.style.display = 'block';
+}
